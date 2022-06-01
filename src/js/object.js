@@ -46,7 +46,7 @@ export const toastObject = function (el, instance) {
 		    changeText(el, text);
 		    return this;
 	    },
-	    goAway: function (delay = 800) {
+	    goAway: function (delay = 0) {
 		    disposed = true;
 		    return goAway(el, delay, instance);
 	    },
