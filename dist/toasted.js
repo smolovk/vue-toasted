@@ -468,6 +468,17 @@ var Toasted = function Toasted(_options) {
 		return true;
 	};
 
+	/**
+  * Clear All Toasts Without Animations
+  *
+  * @returns {boolean}
+  */
+	this.clearFast = function (onClear) {
+		_this.toasts = [];
+
+		return true;
+	};
+
 	return this;
 };
 
@@ -1009,7 +1020,13 @@ var createAction = function createAction(action, toastObject) {
 		return null;
 	}
 
-	var el = document.createElement('a');
+	var el = void 0;
+	if (action.href) {
+		el = document.createElement('a');
+	} else {
+		el = document.createElement('button');
+	}
+
 	el.classList.add('action');
 	el.classList.add('ripple');
 

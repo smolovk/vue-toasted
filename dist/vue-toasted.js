@@ -468,6 +468,17 @@ var Toasted = function Toasted(_options) {
 		return true;
 	};
 
+	/**
+  * Clear All Toasts Without Animations
+  *
+  * @returns {boolean}
+  */
+	this.clearFast = function (onClear) {
+		_this.toasts = [];
+
+		return true;
+	};
+
 	return this;
 };
 

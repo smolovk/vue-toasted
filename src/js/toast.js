@@ -181,6 +181,17 @@ export const Toasted = function (_options) {
 		return true;
 	}
 
+	/**
+	 * Clear All Toasts Without Animations
+	 *
+	 * @returns {boolean}
+	 */
+	 this.clearFast = (onClear) => {
+		this.toasts = [];
+
+		return true;
+	}
+
 	return this;
 };
 
